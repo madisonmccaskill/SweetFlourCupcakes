@@ -1,0 +1,130 @@
+/* Hamburger Nav Menu */
+.nav-toggle {
+    text-decoration: none;
+    text-indent: -300px;
+    position: relative;
+    overflow: hidden;
+    width: 60px;
+    height: 55px;
+    float: right;
+}
+
+.nav-toggle:before {
+    color: black !important; 
+    font: normal 28px/55px "responsivenav";
+    text-align: center;
+    position: absolute;
+    content: "\2261"; 
+    text-indent: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.nav-toggle.active:before {
+    font-size: 24px;
+    content: "\78"; 
+}
+
+.nav-collapse {
+    background: #F2C2C2;
+    padding: 15px;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-collapse li {
+    display: block;
+}
+
+.nav-collapse a {
+    text-decoration: none;
+    padding: 0.7em 1em;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    display: block;
+}
+
+.nav-collapse a:hover {
+    color: #FFF8F6;
+    text-decoration: underline;
+}
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.nav-collapse.opened {
+    max-height: 9999px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+
+/* MEDIA QUERIES FOR HAMBURGER NAV */
+@media screen and (min-width: 768px) {
+    .nav-collapse ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .nav-collapse li {
+        width: auto;
+    }
+
+    .nav-collapse a {
+        padding: 1.02em 2em;
+        text-align: center;
+        border-top: 0;
+        margin: 0;
+    }
+
+    .nav-collapse ul ul a {
+        display: none;
+    }
+
+    .nav-collapse.closed {
+        max-height: none;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #FFF8F6;
+
+}
