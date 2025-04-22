@@ -3,40 +3,40 @@
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-style: normal;
-  }
+}
 
 .raleway {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-  }
+}
 
   /* font styles for the entire sheet hopefully */
 h1 { 
-    font-family: playfair-display;
+    font-family: "Playfair Display";
     font-size: 50pt;
     font-weight: bold;
 }
 
 h2 { 
-    font-family: playfair-display;
+    font-family: "Playfair Display";
     font-size: 40pt;
     font-weight: bold;
 }
 
 h3 { 
-    font-family: playfair-display;
+    font-family: "Playfair Display";
     font-size: 28pt;
 }
 
 h4 { 
-    font-family: Raleway;
+    font-family: "Raleway";
     font-size: 20pt;
 }
 
 p { 
-    font-family: Raleway;
+    font-family: "Raleway";
     font-size: 18pt;
 }
 
@@ -46,6 +46,7 @@ p {
     box-sizing: border-box;
 }
 
+/* HEADER */
 header {
     background-color: #F2C2C2;
     width: 100%;
@@ -200,6 +201,7 @@ body {
     font-size: 18pt;
 }
 
+/* FOOTER */
 footer {
     background-color: #F2C2C2;
     padding: 20px;
@@ -241,6 +243,9 @@ footer img {
 .footer-right {
     text-align: right;
 }
+.footer p {
+    font-family: "Raleway", sans-serif;
+}
 
 /* MEDIA QUERIES FOR HAMBURGER NAV */
 @media screen and (min-width: 768px) {
@@ -280,13 +285,284 @@ footer img {
     }
 }
 
-
-
-body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: #FFF8F6;
-    font-family: Raleway;
-    font-size: 18pt;
+/* INDEX CSS */
+.welcome {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 40px;
+    transition: all 0.4s ease-in-out;
 }
+
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 1.6;
+    transition: all 0.4s ease-in-out;
+}
+
+.recent-recipes {
+    background-color: #F6A5A5;
+    padding: 40px 20px;
+    max-width: 300px;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.recent-recipes > div {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.recent-recipes h2 {
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    margin: 20px;
+    text-align: center;
+    color: black;
+}
+
+.recent-recipes p {
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    color: #FFF8F6;
+    margin-bottom: 5px;
+}
+
+.recent-recipes a {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.recent-recipes a:hover {
+    color: #FFF8F6;
+    text-decoration: underline;
+}
+
+.recent-recipes a:focus {
+    color: #FFF8F6;
+    text-decoration: underline;
+}
+
+.recent-recipes img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meet-the-team {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #F8B8A2;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.meet-the-team h2 {
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 20px;
+}
+
+.meet-the-team img {
+    width: 150px;
+    height: 150px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recent-recipes img:hover,
+.meet-the-team img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.index-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: auto;
+    flex-wrap: wrap;
+    transition: all 0.4s ease-in-out;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    gap: 20px;
+    min-width: 0;
+    max-width: 900px;
+    transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .index-layout {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .recent-recipes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100%;
+        background-color: #F6A5A5;
+        box-shadow: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .recent-recipes h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .recent-recipes a {
+        font-size: 18px;
+    }
+
+    .recent-recipes img {
+        max-width: 120px;
+        border-radius: 8px;
+    }
+
+    .recent-recipes > div {
+        text-align: center;
+        max-width: 150px;
+        transition: all 0.3s ease;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 0 10px;
+        min-width: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .about,
+    .meet-the-team {
+        text-align: center;
+        padding: 20px 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .welcome {
+        font-size: 30px;
+        padding: 30px 10px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .meet-the-team img {
+        width: 100px;
+        margin: 10px;
+    }
+}
+
+/* ABOUT CSS */
+.about-us {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+    font-family: "Raleway", sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.about-us h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-us img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.about-us img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-us p {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: black;
+}
+
+.about-text {
+    background-color: #F8B8A2;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.4s ease-in-out;
+    max-width: 800px;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .about-us {
+        padding: 20px 15px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .about-us h2 {
+        font-size: 32pt;
+    }
+
+    .about-us img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .about-us p {
+        font-size: 18px;
+    }
+}
+
+
+/* RECIPES CSS */
+
+/* INDIVIDUAL RECIPES CSS */
+
+/* OUR TEAM CSS */
+
+/* CONTACT CSS */
