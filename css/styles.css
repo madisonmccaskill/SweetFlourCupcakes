@@ -1,17 +1,44 @@
 /* FONTS */
-.playfair-display-<uniquifier> {
+.playfair-display {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
     font-style: normal;
   }
 
-.raleway-<uniquifier> {
+.raleway {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
   }
+
+  /* font styles for the entire sheet hopefully */
+h1 { 
+    font-family: playfair-display;
+    font-size: 50pt;
+    font-weight: bold;
+}
+
+h2 { 
+    font-family: playfair-display;
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+h3 { 
+    font-family: playfair-display;
+    font-size: 28pt;
+}
+
+h4 { 
+    font-family: Raleway;
+    font-size: 20pt;
+}
+
+p { 
+    font-family: Raleway;
+    font-size: 18pt;
+}
 
 /* Hamburger Nav Menu */
 .nav-toggle {
@@ -136,10 +163,14 @@
     }
 }
 
+
+
 body {
     margin: 0;
     padding: 0;
     border: 0;
     background-color: #FFF8F6;
+    font-family: Raleway;
+    font-size: 18pt;
 
 }
