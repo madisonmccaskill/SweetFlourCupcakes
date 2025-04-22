@@ -40,15 +40,76 @@ p {
     font-size: 18pt;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #F2C2C2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bakery-name {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.bakery-tagline {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+
+header img {
+    max-width:300px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
 /* Hamburger Nav Menu */
 .nav-toggle {
     text-decoration: none;
     text-indent: -300px;
-    position: relative;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     overflow: hidden;
     width: 60px;
     height: 55px;
-    float: right;
+    z-index: 1100; 
 }
 
 .nav-toggle:before {
@@ -69,7 +130,6 @@ p {
 }
 
 .nav-collapse {
-    background: #F2C2C2;
     padding: 15px;
     text-align: left;
     position: fixed;
@@ -131,12 +191,69 @@ p {
     text-align: center;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #FFF8F6;
+    font-family: Raleway;
+    font-size: 18pt;
+}
+
+footer {
+    background-color: #F2C2C2;
+    padding: 20px;
+    width: 100%;
+}
+
+footer img {
+    max-width:300px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
 /* MEDIA QUERIES FOR HAMBURGER NAV */
 @media screen and (min-width: 768px) {
+    .nav-collapse {
+        justify-content: center;
+    }
+
     .nav-collapse ul {
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center; 
+        width: 100%;
     }
 
     .nav-collapse li {
@@ -157,7 +274,7 @@ p {
     .nav-collapse.closed {
         max-height: none;
     }
-    
+
     .nav-toggle {
         display: none;
     }
@@ -172,5 +289,4 @@ body {
     background-color: #FFF8F6;
     font-family: Raleway;
     font-size: 18pt;
-
 }
