@@ -677,7 +677,7 @@ footer img {
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+.contact-form button:hover, .contact-form button:focus {
     background-color: #F8B8A2;
     
 }
