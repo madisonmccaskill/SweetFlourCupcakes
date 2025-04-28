@@ -715,3 +715,134 @@ footer img {
     
 }
 
+/* RECIPIES PAGE */
+.recipe-links {
+    display: flex;
+    gap: 2rem; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .recipe-card {
+    flex: 1 1 calc(32% - 2rem);
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px; 
+  }
+  
+  .recipe-card .card-media {
+    flex: 1; 
+    overflow: hidden;
+  }
+  .recipe-card .card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+  
+  .recipe-card .card-content {
+    flex: 2;     
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .recipe-card .card-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .recipe-card .card-content h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .recipe-card .card-content p {
+    margin: 0.25rem 0;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .recipe-card .card-content p.credit {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: right;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* INDIVIDUAL RECIPE CARDS */
+.recipe-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;   /* text = 2/3, image = 1/3 */
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    align-items: start;
+  }
+  
+  /* Left column (text) */
+  .recipe-info h2 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .recipe-info .meta {
+    background: rgba(255,255,255,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .recipe-info .intro {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .recipe-info h3 {
+    margin: 1.5rem 0 0.5rem;
+  }
+  .recipe-info ul,
+  .recipe-info ol {
+    margin: 0 0 1rem 1.5rem;
+  }
+  .recipe-info li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Right column (image) */
+  .recipe-image {
+    text-align: center;
+  }
+  .recipe-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+  }
+  .recipe-image .credit {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive: stack on small screens */
+  @media (max-width: 700px) {
+    .recipe-details {
+      display: block;
+      margin: 1rem;
+    }
+    .recipe-image {
+      margin-top: 1.5rem;
+    }
+  }
+  
